@@ -7,10 +7,7 @@ class Client:
         self.cards = []
 
     def show_total_balance(self):
-        total_balance = 0
-        for card in self.cards:
-            total_balance += card.balance
-        return total_balance
+        return sum([card.balance for card in self.cards])
 
 
 class Card:
